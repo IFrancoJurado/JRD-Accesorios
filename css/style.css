@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* header */
+.header{
+    background-color: rgb(68, 69, 73);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px 10px;
+}
+.header__logo{
+    width: 80px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+.header__nav{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.container-fluid{
+    margin-left: 10px;
+}
+.header__ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+.header__a{
+    color: #000;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 20px;
+}
+.header__carrito-logo{
+    width: 70px;
+    margin-bottom: 5px;
+}
+.navbar{
+    display: none;
+}
+
+/* main */
+.main{
+    margin-bottom: 20px;
+}
+.main__title{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 25px;
+    grid-area: titulo;
+}
+.main__container{
+    display: grid;
+    justify-items: center;
+    grid-template-areas: 
+    "titulo titulo titulo titulo"
+    "card1 card2 card3 card4"
+    "card5 card6 card7 card8";
+    grid-template-rows: 100px 450px 450px;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 25px;
+    margin-bottom: 20px;
+}
+
+.main__tarjetas{
+    background-color: rgb(68, 69, 73);
+    width: 250px;
+    height: 430px;
+    border-radius: 10px;
+}
+.main__tarjetas button{
+    padding: 5px;
+    border-radius: 8px;
+}
+.main__img{
+    width: 100%;
+    height: 300px;
+}
+.tarjetas__info{
+    padding: 10px;
+    color: aliceblue;
+}
+.main__descripcion{
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.img4{
+    grid-area: card8;
+}
+
+.img8{
+    grid-area: card2;
+}
+/* MAIN ACCESORIOS */
+.main__title-container{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+    margin: 25px 0 30px 0;
+    grid-area: titulo;
+}
+.main__container-2{
+    display: grid;
+    justify-items: center;
+    grid-template-areas: 
+    "titulo titulo titulo titulo"
+    "card1 card2 card3 card4";
+    grid-template-rows: 100px 450px;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 25px;
+    margin-bottom: 20px;
+}
+
+
+/* Main quienes-Somos */
+.main__quienesSomos{
+    height: 400px;
+    padding: 15px;
+}
+.main__quienesSomos p{
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.main__quienesSomos-img{
+    width: 150px;
+    
+}
+
+/* footer */
+.footer{
+    background-color: rgb(68, 69, 73);
+    color: aliceblue;
+    height: 300px;
+}
+
+.footer__redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footer__redes-links{
+    margin: 20px 20px 8px;
+}
+
+footer img{
+    width: 40px;
+}
+.footer__container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+}
+.footer__title{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    font-size: 30px;
+}
+.footer__container a{
+    text-decoration: none;
+    list-style: none;
+    color: aliceblue;
+    margin-bottom: 5px;
+}
+.footer__container ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footer h3{
+    font-size: 18px;
+    margin: 0 0 10px 30px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 500px){
+    /* header */
+    .header{
+        background-color: rgb(68, 69, 73);
+    }
+    .header__logo{
+        display: none;
+    }
+    .container-fluid, .header__nav, .header__carrito-logo{
+       margin-left: 10px;
+       display: none;
+    }
+    .navbar{
+        background-color: rgb(68, 69, 73);
+        display: flex;
+        height: 100px;
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+
+    /* main */
+    .main{
+        margin-top: 100px;
+    }
+    .main__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-template-areas: 
+        "titulo titulo titulo titulo"
+        "card1 card2 card3 card4"
+        "card5 card6 card7 card8";
+        grid-template-rows: 100px 450px 450px;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 25px;
+        margin-bottom: 20px;
+    }
+
+    /* footer */
+}
