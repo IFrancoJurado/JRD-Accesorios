@@ -1,4 +1,6 @@
-//header
+
+@use "../sass/partials/mediaQ" as*;
+@use "../sass/partials/variables" as*;
 html{
     margin: 0;
     padding: 0;
@@ -6,22 +8,44 @@ html{
 }
 
 .header{
-    background-color: rgb(68, 69, 73);
+    background-color: $colorBase;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 25px 10px;
+    top: 0;
+    // position: fixed;
+    // width: 100%;
+    @include mobile {
+        background-color: $colorBase;
+    }
     &__logo{
         width: 80px;
         margin-left: 15px;
         margin-bottom: 5px;
+        @include mobile{
+            display: none;
+        }
     }
     &__nav{
         display: flex;
         flex-direction: column;
         height: 100%;
-        .barra{
+        @include mobile{
             margin-left: 10px;
+            display: none;
+        }
+        .barra{
+            @include mobile{
+                margin-left: 10px;
+                display: none;
+            }
+            .buscadora{
+                margin-left: 10px;
+                @include mobile{
+                    width: 70%;
+                }
+            }
         }
         .header__ul{
             display: flex;
@@ -36,22 +60,43 @@ html{
                 font-size: 20px;
                 margin-right: 20px;
             }
+            .header__a:hover{
+                color: #fff;
+            }
         }
     }
     .navbar{
         display: none;
+        @include mobile{
+            background-color: $colorBase;
+            display: flex;
+            height: 100px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            .barrita{
+                width: 80%;
+            }
+        }
     }
     &__carrito-logo{
         width: 70px;
         margin-bottom: 5px;
+        @include mobile{
+            margin-left: 10px;
+            display: none;
+        }
     }
 }
 
-//main
+//MAIN
 .main{
+    // margin-top: 140px;
     margin-bottom: 20px;
-
-    &__container{
+    @include mobile{
+        margin-top: 70px;
+    }
+    .main__container{
         display: grid;
         justify-items: center;
         grid-template-areas: 
@@ -62,113 +107,215 @@ html{
         grid-template-columns: repeat(4, 1fr);
         row-gap: 25px;
         margin-bottom: 20px;
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            grid-template-areas: 
+            "titulo titulo titulo titulo"
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+            grid-template-rows: 100px 450px 450px;
+            grid-template-columns: repeat(4, 1fr);
+            row-gap: 25px;
+            margin-bottom: 20px;
+        }
+        .main__title{
+            @include titulo ();
+        }
+        .main__tarjetas{
+            background-color: $colorBase;
+            width: 250px;
+            height: 430px;
+            border-radius: 10px;
+            .main__img{
+                width: 100%;
+                height: 300px;
+            }
+            .tarjetas__info{
+                padding: 10px;
+                color: aliceblue;
+                .main__descripcion{
+                    text-transform: uppercase;
+                    font-size: 18px;
+                }
+                button{
+                    @include btn-carrito ()
+                }
+                button:hover{
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+        }
+        .main__tarjetas:hover{
+            transform: scale(1.1, 1.1);
+            cursor: pointer;
+        }
+        .img4{
+            grid-area: card8;
+        }
+        
+        .img8{
+            grid-area: card2;
+        }
+    }
+    .main__containers{
+        display: grid;
+        justify-items: center;
+        grid-template-areas: 
+        "titulo titulo titulo titulo"
+        "card1 card2 card3 card4";
+        grid-template-rows: 100px 450px;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 25px;
+        margin-bottom: 20px;
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            grid-template-areas: 
+            "titulo titulo titulo titulo"
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
+            grid-template-rows: 100px 450px 450px;
+            grid-template-columns: repeat(4, 1fr);
+            row-gap: 25px;
+            margin-bottom: 20px;
+        }
+        .main__title-container{
+            @include titulo ();
+            margin: 25px 0 30px 0;
+           @include titulo ();
+        }
+        .main__tarjetas{
+            background-color: $colorBase;
+            width: 250px;
+            height: 430px;
+            border-radius: 10px;
+            .main__img{
+                width: 100%;
+                height: 300px;
+            }
+            .tarjetas__info{
+                padding: 10px;
+                color: aliceblue;
+                .main__descripcion{
+                    text-transform: uppercase;
+                    font-size: 18px;
+                }
+                button{
+                    @include btn-carrito;
+                }
+                button:hover{
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+        }
+        .main__tarjetas:hover{
+            transform: scale(1.1, 1.1);
+            cursor: pointer;
+        }
     }
     
-    &__title{
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 40px;
-        margin-top: 25px;
-        grid-area: titulo;
-    }
-
-    &__tarjetas{
-        background-color: rgb(68, 69, 73);
-        width: 250px;
-        height: 430px;
-        border-radius: 10px;
-        .main__img{
-            width: 100%;
-            height: 300px;
-        }
-
-        .tarjetas__info{
-            padding: 10px;
-            color: aliceblue;
-            .main__descripcion{
-                text-transform: uppercase;
-                font-size: 18px;
-            }
-            & button{
-                    padding: 5px;
-                    border-radius: 8px;
-            }
-        }
-    }
-
-    .img4{
-        grid-area: card8;
-    }
-    
-    .img8{
-        grid-area: card2;
-    }
 }
-
-/* MAIN ACCESORIOS */
-.main__container-2{
-    display: grid;
-    justify-items: center;
-    grid-template-areas: 
-    "titulo titulo titulo titulo"
-    "card1 card2 card3 card4";
-    grid-template-rows: 100px 450px;
-    grid-template-columns: repeat(4, 1fr);
-    row-gap: 25px;
-    margin-bottom: 20px;
-    .main__title-container{
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 40px;
-        margin: 25px 0 30px 0;
-        grid-area: titulo;
-    }
-}
-
-/* Main quienes-Somos */
 .main__quienesSomos{
     height: 400px;
     padding: 15px;
-    & p{
+    @include mobile{
+        margin-top: 35px;
+    }
+    .main__title{
+        text-transform: uppercase;
+        text-align: start;
+        font-size: 40px;
+        margin-top: 25px;
+        grid-area: titulo;
+        @include mobile{
+            text-align: center;
+        }
+    }
+    h2{
+        @include mobile{
+            margin-top: 30px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+    p{
         text-transform: uppercase;
         font-size: 16px;
+        @include mobile{
+            text-align: center;
+            font-size: 20px;
+        }
     }
 }
-//footer
+
+//FOOTER
 .footer{
-    background-color: rgb(68, 69, 73);
+    background-color: $colorBase;
     color: aliceblue;
     height: 300px;
+    @include mobile{
+        height: 500px;
+    }
+    
     .footer__redes{
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: center;
+        width:100%;
+        height: 100px;
         .footer__redes-links{
-            margin: 20px 20px 8px;
+            margin: 20px 50px 8px;
+            img{
+                width: 40px;
+            }
+            img:hover{
+                transform: scale(1.3, 1.3);
+                cursor: pointer;
+            }
         }
-        & img{
-            width: 40px;
+        .no{
+            display: none;
         }
     }
     .footer__container{
         display: flex;
         flex-direction: row;
         justify-content:space-evenly;
-        & a{
-            text-decoration: none;
-            list-style: none;
-            color: aliceblue;
-            margin-bottom: 5px;
-        }
-        & ul{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+        @include mobile{
+            display: grid;
+            grid-template-areas: 
+            "categoria ayuda"
+            "contactanos .";
+            grid-template-columns: repeat(2, 2fr);
+            grid-template-rows: 200px;
         }
     }
-    & h3{
+    h3{
         font-size: 18px;
         margin: 0 0 10px 30px;
         text-transform: uppercase;
     }
+    
+    ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    a{
+        text-decoration: none;
+        list-style: none;
+        color: aliceblue;
+        margin-bottom: 5px;
+    }
+    a:hover{
+        color: aliceblue;
+        transform: scale(1.1, 1.1);
+        cursor: pointer;
+    }
+}
 }
