@@ -1,7 +1,6 @@
 @mixin btn-carrito (){
     padding: 5px;
     border-radius: 10px;
-    margin-left: 16px;
     width: 200px;
     height: 40px;
     text-transform: uppercase;
@@ -12,7 +11,11 @@
     text-align: center;
     font-size: 40px;
     margin-top: 25px;
-    grid-area: titulo;
+    margin-bottom: 25px;
 }
 
-$colorBase: rgb(68, 69, 73);
+$colorBase: #212529;
+$colorbtn: rgb(158, 43, 43);
+$columspc: repeat(auto-fill, minmax(300px, 250px));
+$rowspc: 22rem;
+$hovernaranja: rgb(221, 155, 32);

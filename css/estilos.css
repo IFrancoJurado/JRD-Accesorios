@@ -5,22 +5,28 @@ html {
 }
 
 .header {
-  background-color: rgb(68, 69, 73);
+  background-color: #212529;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
-  padding: 20px 25px 10px;
+  padding: 20px;
   top: 0;
 }
 @media screen and (max-width: 500px) {
   .header {
-    background-color: rgb(68, 69, 73);
+    background-color: #212529;
   }
 }
 .header__logo {
   width: 80px;
   margin-left: 15px;
   margin-bottom: 5px;
+}
+@media screen and (max-width: 768px) {
+  .header__logo {
+    display: none;
+  }
 }
 @media screen and (max-width: 500px) {
   .header__logo {
@@ -30,11 +36,27 @@ html {
 .header__nav {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
   height: 100%;
+  margin-top: 15px;
+}
+@media screen and (max-width: 768px) {
+  .header__nav {
+    display: none;
+  }
 }
 @media screen and (max-width: 500px) {
   .header__nav {
     margin-left: 10px;
+    display: none;
+  }
+}
+.header__nav .barra {
+  margin-left: 20px;
+}
+@media screen and (max-width: 768px) {
+  .header__nav .barra {
     display: none;
   }
 }
@@ -45,7 +67,13 @@ html {
   }
 }
 .header__nav .barra .buscadora {
-  margin-left: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .header__nav .barra .buscadora {
+    width: 70%;
+  }
 }
 @media screen and (max-width: 500px) {
   .header__nav .barra .buscadora {
@@ -54,27 +82,41 @@ html {
 }
 .header__nav .header__ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  width: 100%;
   list-style: none;
   text-transform: uppercase;
   margin-top: 10px;
 }
 .header__nav .header__ul .header__a {
-  color: #000;
+  color: #fff;
   font-weight: bolder;
   text-decoration: none;
   font-size: 20px;
-  margin-right: 20px;
+  transition: 0.3s ease;
 }
 .header__nav .header__ul .header__a:hover {
-  color: #fff;
+  color: rgb(221, 155, 32);
 }
 .header .navbar {
   display: none;
 }
+@media screen and (max-width: 768px) {
+  .header .navbar {
+    background-color: #212529;
+    display: flex;
+    height: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+  .header .navbar .barrita {
+    width: 80%;
+  }
+}
 @media screen and (max-width: 500px) {
   .header .navbar {
-    background-color: rgb(68, 69, 73);
+    background-color: #212529;
     display: flex;
     height: 100px;
     position: fixed;
@@ -89,6 +131,12 @@ html {
   width: 70px;
   margin-bottom: 5px;
 }
+@media screen and (max-width: 768px) {
+  .header__carrito-logo {
+    margin-left: 10px;
+    display: none;
+  }
+}
 @media screen and (max-width: 500px) {
   .header__carrito-logo {
     margin-left: 10px;
@@ -97,63 +145,66 @@ html {
 }
 
 .main {
+  width: 100%;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .main {
+    margin-top: 70px;
+  }
 }
 @media screen and (max-width: 500px) {
   .main {
     margin-top: 70px;
   }
 }
-.main .main__container {
-  display: grid;
-  justify-items: center;
-  grid-template-areas: "titulo titulo titulo titulo" "card1 card2 card3 card4" "card5 card6 card7 card8";
-  grid-template-rows: 100px 450px 450px;
-  grid-template-columns: repeat(4, 1fr);
-  row-gap: 25px;
-  margin-bottom: 20px;
-}
-@media screen and (max-width: 500px) {
-  .main .main__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    grid-template-areas: "titulo titulo titulo titulo" "card1 card2 card3 card4" "card5 card6 card7 card8";
-    grid-template-rows: 100px 450px 450px;
-    grid-template-columns: repeat(4, 1fr);
-    row-gap: 25px;
-    margin-bottom: 20px;
-  }
-}
-.main .main__container .main__title {
+.main .main__title {
   text-transform: uppercase;
   text-align: center;
   font-size: 40px;
   margin-top: 25px;
-  grid-area: titulo;
+  margin-bottom: 25px;
+}
+.main .main__container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 250px));
+  grid-auto-rows: 22rem;
+  gap: 50px;
+  margin-bottom: 30px;
 }
 .main .main__container .main__tarjetas {
-  background-color: rgb(68, 69, 73);
-  width: 250px;
-  height: 430px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
-.main .main__container .main__tarjetas .main__img {
+.main .main__container .main__tarjetas img {
+  height: 200px;
+  display: block;
   width: 100%;
-  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
 }
 .main .main__container .main__tarjetas .tarjetas__info {
-  padding: 10px;
-  color: aliceblue;
+  width: 100%;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
 }
 .main .main__container .main__tarjetas .tarjetas__info .main__descripcion {
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 .main .main__container .main__tarjetas .tarjetas__info button {
   padding: 5px;
   border-radius: 10px;
-  margin-left: 16px;
   width: 200px;
   height: 40px;
   text-transform: uppercase;
@@ -167,68 +218,61 @@ html {
   transform: scale(1.1, 1.1);
   cursor: pointer;
 }
-.main .main__container .img4 {
-  grid-area: card8;
-}
-.main .main__container .img8 {
-  grid-area: card2;
-}
-.main .main__containers {
-  display: grid;
-  justify-items: center;
-  grid-template-areas: "titulo titulo titulo titulo" "card1 card2 card3 card4";
-  grid-template-rows: 100px 450px;
-  grid-template-columns: repeat(4, 1fr);
-  row-gap: 25px;
-  margin-bottom: 20px;
-}
-@media screen and (max-width: 500px) {
-  .main .main__containers {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    grid-template-areas: "titulo titulo titulo titulo" "card1 card2 card3 card4" "card5 card6 card7 card8";
-    grid-template-rows: 100px 450px 450px;
-    grid-template-columns: repeat(4, 1fr);
-    row-gap: 25px;
-    margin-bottom: 20px;
+@media screen and (max-width: 768px) {
+  .main .main__container .main__tarjetas:hover {
+    transform: none;
   }
 }
-.main .main__containers .main__title-container {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 40px;
-  margin-top: 25px;
-  grid-area: titulo;
+@media screen and (max-width: 500px) {
+  .main .main__container .main__tarjetas:hover {
+    transform: none;
+  }
+}
+.main .main__title-container {
   margin: 25px 0 30px 0;
   text-transform: uppercase;
   text-align: center;
   font-size: 40px;
   margin-top: 25px;
-  grid-area: titulo;
+  margin-bottom: 25px;
+}
+.main .main__containers {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 250px));
+  grid-auto-rows: 22rem;
+  gap: 50px;
+  margin-bottom: 30px;
 }
 .main .main__containers .main__tarjetas {
-  background-color: rgb(68, 69, 73);
-  width: 250px;
-  height: 430px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
-.main .main__containers .main__tarjetas .main__img {
+.main .main__containers .main__tarjetas img {
+  height: 200px;
+  display: block;
   width: 100%;
-  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
 }
 .main .main__containers .main__tarjetas .tarjetas__info {
-  padding: 10px;
-  color: aliceblue;
+  width: 100%;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
 }
 .main .main__containers .main__tarjetas .tarjetas__info .main__descripcion {
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 1.2rem;
 }
 .main .main__containers .main__tarjetas .tarjetas__info button {
   padding: 5px;
   border-radius: 10px;
-  margin-left: 16px;
   width: 200px;
   height: 40px;
   text-transform: uppercase;
@@ -242,50 +286,63 @@ html {
   transform: scale(1.1, 1.1);
   cursor: pointer;
 }
-
-.main__quienesSomos {
-  height: 400px;
-  padding: 15px;
-}
-@media screen and (max-width: 500px) {
-  .main__quienesSomos {
-    margin-top: 35px;
+@media screen and (max-width: 768px) {
+  .main .main__containers .main__tarjetas:hover {
+    transform: none;
   }
 }
-.main__quienesSomos .main__title {
+@media screen and (max-width: 500px) {
+  .main .main__containers .main__tarjetas:hover {
+    transform: none;
+  }
+}
+
+.mainFQ {
+  height: 500px;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 768px) {
+  .mainFQ {
+    margin-top: 90px;
+    height: 600px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .mainFQ {
+    height: 650px;
+    margin-top: 95px;
+  }
+}
+.mainFQ .main__title {
   text-transform: uppercase;
-  text-align: start;
+  text-align: center;
   font-size: 40px;
   margin-top: 25px;
-  grid-area: titulo;
+  margin-bottom: 25px;
 }
 @media screen and (max-width: 500px) {
-  .main__quienesSomos .main__title {
+  .mainFQ .main__title {
+    margin: 0 auto 30px;
     text-align: center;
+    font-size: 30px;
+    width: 80%;
   }
 }
-@media screen and (max-width: 500px) {
-  .main__quienesSomos h2 {
-    margin-top: 30px;
-    text-align: center;
-    text-transform: uppercase;
-  }
-}
-.main__quienesSomos p {
-  text-transform: uppercase;
-  font-size: 16px;
-}
-@media screen and (max-width: 500px) {
-  .main__quienesSomos p {
-    text-align: center;
-    font-size: 20px;
-  }
+.mainFQ .main__conteinerFQ {
+  width: 70%;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .footer {
-  background-color: rgb(68, 69, 73);
+  background-color: #212529;
   color: aliceblue;
   height: 300px;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 330px;
+  }
 }
 @media screen and (max-width: 500px) {
   .footer {
@@ -306,17 +363,46 @@ html {
 .footer .footer__redes .footer__redes-links img {
   width: 40px;
 }
+@media screen and (max-width: 768px) {
+  .footer .footer__redes .footer__redes-links img {
+    width: 50px;
+  }
+}
 .footer .footer__redes .footer__redes-links img:hover {
   transform: scale(1.3, 1.3);
   cursor: pointer;
 }
-.footer .footer__redes .no {
-  display: none;
+@media screen and (max-width: 768px) {
+  .footer .footer__redes .footer__redes-links img:hover {
+    transform: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .footer .footer__redes .footer__redes-links img:hover {
+    transform: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer .footer__redes .no {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .footer .footer__redes .no {
+    display: none;
+  }
 }
 .footer .footer__container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+@media screen and (max-width: 768px) {
+  .footer .footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 @media screen and (max-width: 500px) {
   .footer .footer__container {
@@ -341,11 +427,22 @@ html {
   list-style: none;
   color: aliceblue;
   margin-bottom: 5px;
+  transition: 0.3s ease;
 }
 .footer ul a:hover {
-  color: aliceblue;
+  color: rgb(221, 155, 32);
   transform: scale(1.1, 1.1);
   cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .footer ul a:hover {
+    transform: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .footer ul a:hover {
+    transform: none;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */

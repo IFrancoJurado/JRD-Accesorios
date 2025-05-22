@@ -1,185 +1,217 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>JRD Accesorios</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/estilos.css">
-    </head>
-    <body>
-        <header class="header">
-            <div class="header__logo">
-                <a href="#"><img class="header__logo" src="./media/telefono-inteligente.png" alt=""></a>
-            </div>
-            <nav class="header__nav">
-                <div class="container-fluid barra">
-                    <form class="d-flex buscadora" role="search">
-                      <input class="form-control me-2" type="search" placeholder="¿Qué estas buscando?" aria-label="Search">
-                    </form>
-                </div>
-                <ul class="header__ul">
-                    <li class="header__li"><a class="header__a" href="#">Tienda</a></li>
-                    <li class="header__li"><a class="header__a" href="./pages/accesorios.html">Accesorios</a></li>
-                    <li class="header__li"><a class="header__a" href="./pages/cargadores.html">Cargadores</a></li>
-                    <li class="header__li"><a class="header__a" href="./pages/auriculares.html">Auriculares</a></li>
-                    <li class="header__li"><a class="header__a" href="./pages/quienes-somos.html">Quienes somos</a></li>
-                </ul>
-            </nav>
-            <div class="header__carrito">
-                <a href=""><img class="header__carrito-logo" src="./media/carrito-de-compras.png" alt=""></a>
-            </div>
 
-            <!-- NAVBAR MOBILE-->
-            <nav class="navbar navbar-dark bg-dark fixed-top">
-                <div class="container-fluid ">
-                    <form class="d-flex barrita" role="search">
-                        <input class="form-control me-2" type="search" placeholder="¿Qué estas buscando?" aria-label="Search">
-                    </form>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Somos un emprendimiento familiar dedicado a la venta de accesorios para tu celular, contamos con alta variedad de productos y aceptamos todos los medios de pago">
+    <meta name="keywords" content="tecnología, accesorios, celulares, tienda online, fundas ">
+    <title>Home - JRD Accesorios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body>
+    <header class="header">
+            <div class="header__logo">
+                <a href="#"><img class="header__logo" src="./media/telefono-inteligente.png" alt="logo de la pagina"></a>
+            </div>
+        <nav class="header__nav"> 
+            <div class="container-fluid barra">
+                <form class="d-flex buscadora" role="search">
+                    <input class="form-control me-2" type="search" placeholder="¿Qué estas buscando?"
+                        aria-label="Search">
+                </form>
+            </div>
+            <ul class="header__ul">
+                <li class="header__li"><a class="header__a" href="#">Tienda</a></li>
+                <li class="header__li"><a class="header__a" href="./pages/accesorios.html">Accesorios</a></li>
+                <li class="header__li"><a class="header__a" href="./pages/cargadores.html">Cargadores</a></li>
+                <li class="header__li"><a class="header__a" href="./pages/auriculares.html">Auriculares</a></li>
+                <li class="header__li"><a class="header__a" href="./pages/preguntasFrecuentes.html">FAQ</a></li>
+            </ul>
+        </nav>
+        <!-- <div class="header__carrito">
+            <a href=""><img class="header__carrito-logo" src="./media/anadir-al-carrito.png" alt="imagen del carrito de compras"></a>
+        </div> -->
+
+        <!-- NAVBAR MOBILE-->
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid ">
+                <form class="d-flex barrita" role="search">
+                    <input class="form-control me-2" type="search" placeholder="¿Qué estas buscando?"
+                        aria-label="Search">
+                </form>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
                     <div class="offcanvas-header">
-                      <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">JRD Accesorios</h5>
-                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">JRD ACCESORIOS</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Nuestra tienda</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="./pages/accesorios.html">Accesorios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/cargadores.html">Cargadores</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="./pages/auriculares.html">Auriculares</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="./pages/quienes-somos.html">Quienes somos</a>
-                          </li>
-                      </ul>
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">NUESTRA TIENDA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/accesorios.html">ACCESORIOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/cargadores.html">CARGADORES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/auriculares.html">AURICULARES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/preguntasFrecuentes.html">PREGUNTAS FRECUENTES</a>
+                            </li>
+                        </ul>
                     </div>
-                  </div>
-                </div>
-            </nav>
-        </header>
-
-        <main class="main">
-            <section class="main__tienda">
-                <div class="main__container">
-                    <h1 class="main__title">Nuestra Tienda</h1>
-                    <div class="main__tarjetas img1">
-                        <img class="main__img" src="./media/auribluet.jpeg" alt="">
-                        <div class="tarjetas__info">
-                            <h3 class="main__descripcion">Auriculares BTS</h3>
-                            <p class="main__precio">$XXXX</p>
-                            <button>Añadir al carrito</button>
-                        </div>
-                    </div>
-                    <div class="main__tarjetas img2">
-                        <img class="main__img" src="./media/ventilador.ft.jpeg" alt="">
-                        <div class="tarjetas__info">
-                            <h3 class="main__descripcion">Ventilador de mano</h3>
-                            <p class="main__precio">$XXXX</p>
-                            <button>Añadir al carrito</button>
-                        </div>
-                    </div>
-                    <div class="main__tarjetas img3">
-                        <img class="main__img" src="./media/cargadorpro21tipoc3.1a.jpeg" alt="">
-                        <div class="tarjetas__info">
-                            <h3 class="main__descripcion">Cargador Tipo C</h3>
-                            <p class="main__precio">$XXXX</p>
-                            <button>Añadir al carrito</button>
-                        </div>
-                    </div>
-                    <div class="main__tarjetas img4">
-                        <img class="main__img" src="./media/cables.ft.jpeg" alt="">
-                        <div class="tarjetas__info">
-                            <h3 class="main__descripcion">Cables (C, OTG, V8)</h3>
-                            <p class="main__precio">$XXXX</p>
-                            <button>Añadir al carrito</button>
-                        </div>
-                    </div>
-                    <div class="main__tarjetas img5">
-                        <img class="main__img" src="./media/cargadorpro21tipoc.jpeg" alt="">
-                        <div class="tarjetas__info">
-                            <h3 class="main__descripcion">Cargador Tipo C Turbo</h3>
-                            <p class="main__precio">$XXXX</p>
-                            <button>Añadir al carrito</button>
-                        </div>
-                    </div>
-                    <div class="main__tarjetas img6">
-                        <img class="main__img" src="./media/cargadorpro21tipomusb.jpeg" alt="">
-                        <div class="tarjetas__info">
-                            <h3 class="main__descripcion">Cargador Pro21 V8</h3>
-                            <p class="main__precio">$XXXX</p>
-                            <button>Añadir al carrito</button>
-                        </div>
-                    </div>
-                    <div class="main__tarjetas img7">
-                        <img class="main__img" src="./media/parlantito.ft.jpeg" alt="">
-                        <div class="tarjetas__info">
-                            <h3 class="main__descripcion">Parlantito BTS</h3>
-                            <p class="main__precio">$XXXX</p>
-                            <button>Añadir al carrito</button>
-                        </div>
-                    </div>
-                    <div class="main__tarjetas img8">
-                        <img class="main__img" src="./media/manos libres.jpg" alt="">
-                        <div class="tarjetas__info">
-                            <h3 class="main__descripcion">Manos libres</h3>
-                            <p class="main__precio">$XXXX</p>
-                            <button>Añadir al carrito</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- footer -->
-        <footer class="footer">
-            <div class="footer__redes">      
-                <a class="footer__redes-links" href=""><img src="./media/instagram.png" alt=""></a>
-                <a class="footer__redes-links" href=""><img src="./media/facebook.png" alt=""></a>
-                <a class="footer__redes-links no" href=""><img src="./media/youtube.png" alt=""></a>
-                <a class="footer__redes-links no" href=""><img src="./media/tik-tok.png" alt=""></a>
-                <a class="footer__redes-links" href=""><img src="./media/x.png" alt=""></a>
-            </div>
-            <hr>
-            <div class="footer__container">
-                <div class="x">
-                    <h3>Categorías</h3>
-                    <ul>
-                        <a href=""><li>Fundas</li></a>
-                        <a href=""><li>Cargadores</li></a>
-                        <a href=""><li>Auriculares</li></a>
-                        <a href=""><li>Accesorios</li></a>
-                    </ul>
-                </div>
-                <div class="x">
-                    <h3>Ayuda</h3>
-                    <ul>
-                        <a href=""><li>¿Cómo comprar?</li></a>
-                        <a href=""><li>Formas de envio</li></a>
-                        <a href=""><li>Metodo de pago</li></a>
-                    </ul>
-                </div>
-                <div class="x">
-                    <h3>Contactanos</h3>
-                    <ul>
-                        <a href=""><li>+54 9 11 3800-XXXX</li></a>
-                        <a href=""><li>Calle Falsa 123</li></a>
-                        <a href=""><li>jrdaccesorios2527@gmail.com</li></a>
-                    </ul>
                 </div>
             </div>
-        </footer>
+        </nav>
+    </header>
 
-        <!-- Bootstrap -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </body>
+    <main class="main">
+        <h1 class="main__title">Nuestra Tienda</h1>
+        <div class="main__container">
+            <div class="main__tarjetas img1">
+                <img src="./media/auribluet.jpeg" alt="caja de auriculares bluetooth">
+                <div class="tarjetas__info">
+                    <h3 class="main__descripcion">Auriculares BTS</h3>
+                    <p class="main__precio">$10000</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="main__tarjetas img2">
+                <img src="./media/ventilador.ft.jpeg" alt="ventilador de mano">
+                <div class="tarjetas__info">
+                    <h3 class="main__descripcion">Ventilador de mano</h3>
+                    <p class="main__precio">$8000</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="main__tarjetas img3">
+                <img src="./media/cargadorpro21tipoc.jpeg" alt="cargador marca pro21 ficha tipo C">
+                <div class="tarjetas__info">
+                    <h3 class="main__descripcion">Cargador Tipo C</h3>
+                    <p class="main__precio">$8000</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="main__tarjetas img4">
+                <img src="./media/cables.ft.jpeg" alt="3 cables usb tipo c, tipo v8, tipo otg">
+                <div class="tarjetas__info">
+                    <h3 class="main__descripcion">Cables (C, OTG, V8)</h3>
+                    <p class="main__precio">$4000</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="main__tarjetas img5">
+                <img src="./media/cargadorpro21tipoc3.1a.jpeg" alt="cargador marca pro21 ficha tipo C carga rapida">
+                <div class="tarjetas__info">
+                    <h3 class="main__descripcion">Cargador Tipo C Turbo</h3>
+                    <p class="main__precio">$14000</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="main__tarjetas img6">
+                <img src="./media/cargadorpro21tipomusb.jpeg" alt="cargador marca pro21 ficha tipo usb">
+                <div class="tarjetas__info">
+                    <h3 class="main__descripcion">Cargador Pro21 V8</h3>
+                    <p class="main__precio">$6500</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="main__tarjetas img7">
+                <img src="./media/parlantito.ft.jpeg" alt="parlantito bluetooth color rojo">
+                <div class="tarjetas__info">
+                    <h3 class="main__descripcion">Parlantito BTS</h3>
+                    <p class="main__precio">$8000</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="main__tarjetas img8">
+                <img src="./media/manos libres.jpg" alt="auriculares manos libres color rosa">
+                <div class="tarjetas__info">
+                    <h3 class="main__descripcion">Manos libres</h3>
+                    <p class="main__precio">$4000</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer__redes">
+            <a class="footer__redes-links" href=""><img src="./media/instagram.png" alt="icono de instagram"></a>
+            <a class="footer__redes-links" href=""><img src="./media/facebook.png" alt="icono de facebook"></a>
+            <a class="footer__redes-links no" href=""><img src="./media/youtube.png" alt="icono de youtube"></a>
+            <a class="footer__redes-links no" href=""><img src="./media/tik-tok.png" alt="icono de tik tok"></a>
+            <a class="footer__redes-links" href=""><img src="./media/x.png" alt="icono de X"></a>
+        </div>
+        <hr>
+        <div class="footer__container">
+            <div class="x">
+                <h3>Categorías</h3>
+                <ul>
+                    <a href="">
+                        <li>Fundas</li>
+                    </a>
+                    <a href="">
+                        <li>Cargadores</li>
+                    </a>
+                    <a href="">
+                        <li>Auriculares</li>
+                    </a>
+                    <a href="">
+                        <li>Accesorios</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="x">
+                <h3>Ayuda</h3>
+                <ul>
+                    <a href="">
+                        <li>¿Cómo comprar?</li>
+                    </a>
+                    <a href="">
+                        <li>Formas de envio</li>
+                    </a>
+                    <a href="">
+                        <li>Metodo de pago</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="x">
+                <h3>Contactanos</h3>
+                <ul>
+                    <a href="">
+                        <li>+54 9 11 3800-XXXX</li>
+                    </a>
+                    <a href="">
+                        <li>Calle Falsa 123</li>
+                    </a>
+                    <a href="">
+                        <li>jrdaccesorios2527@gmail.com</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous">
+    </script>
+</body>
 </html>
